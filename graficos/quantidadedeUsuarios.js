@@ -1,7 +1,7 @@
 import { getCSS } from "./common.js";
 
 async function quantidadeUsuarios() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
     const res = await fetch(url)
     const dados = await res.json()
     const nomeDasRedes = Object.keys(dados)
