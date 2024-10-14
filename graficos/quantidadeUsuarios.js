@@ -18,13 +18,14 @@ async function quantidadeUsuarios() {
       }
     ]
   
-    const grafico = document.createElem
+  
 
     const layout = {
       plot_bgcolor: getCSS('--bg-color'),
       paper_bgcolor: getCSS('--bg-color')
   }
   
+  const grafico = document.createElem
   grafico.className = 'grafico'
   document.getElementById('graficos-container').appendChild(grafico)
   Plotly.newPlot(grafico, data, layout)
