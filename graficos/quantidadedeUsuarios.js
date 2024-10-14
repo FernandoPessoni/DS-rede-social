@@ -1,6 +1,6 @@
 import { getCSS } from "./common.js";
 
-async function quantidadeUsuarios() {
+async function quantidadedeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeomrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
@@ -12,7 +12,7 @@ async function quantidadeUsuarios() {
   const data = [
     {
       x: 'nomeDasRedes',
-      y: quantidadeDeUsuarios,
+      y: quantidadedeUsuarios,
       type: 'bar',
       marker: {
         color: getCSS('--primary-color')
