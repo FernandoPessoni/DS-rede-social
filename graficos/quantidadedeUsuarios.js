@@ -1,8 +1,5 @@
 import { getCSS } from "./common.js";
 
-grafico.className = 'grafico'
-document.getElementById('graficos-container').appendChild(grafico)
-
 async function quantidadedeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeomrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
