@@ -3,4 +3,3 @@ const getCSS = (variavel) => {
   };
   
   export {getCSS}
-  
