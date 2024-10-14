@@ -1,5 +1,11 @@
 import { getCSS } from "./common.js";
 
+grafico.className = 'grafico'
+document.getElementById('graficos-container').appendChild(grafico)
+Plotly.newPlot(grafico, data)
+
+  quantidadeUsuarios();
+
 async function quantidadedeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeomrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
@@ -20,9 +26,4 @@ async function quantidadedeUsuarios() {
     }
   ]
 
-  const grafico = document.createElement('div')
-grafico.className = 'grafico'
-document.getElementById('graficos-container').appendChild(grafico)
-Plotly.newPlot(grafico, data)
-
-  quantidadeUsuarios()
+  const grafico = document.createElem
