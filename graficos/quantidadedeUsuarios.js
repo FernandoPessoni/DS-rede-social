@@ -1,6 +1,5 @@
 import { getCSS } from "./common.js";
 
-
 async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeomrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
@@ -20,7 +19,6 @@ async function quantidadeUsuarios() {
       }
     }
   ]
-  
 
   const grafico = document.createElement('div')
 grafico.className = 'grafico'
@@ -33,6 +31,5 @@ const layout = {
 }
 
 Plotly.newPlot(grafico, data, layout)
-
 
   quantidadeUsuarios()
