@@ -30,6 +30,6 @@ const layout = {
     paper_bgcolor: getCSS('--bg-color')
 }
 
-Plotly.newPlot(grafico, data, layout)
+Plotly.quantidadedeUsuarios(grafico, data, layout)
 
   quantidadeUsuarios()
