@@ -31,4 +31,4 @@ async function quantidadedeUsuarios() {
 
 }
 
-  quantidadeUsuarios()
+  quantidadedeUsuarios()
