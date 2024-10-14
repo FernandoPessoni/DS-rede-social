@@ -4,8 +4,6 @@ grafico.className = 'grafico'
 document.getElementById('graficos-container').appendChild(grafico)
 Plotly.newPlot(grafico, data)
 
-  quantidadeUsuarios();
-
 async function quantidadedeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeomrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
@@ -13,17 +11,26 @@ async function quantidadedeUsuarios() {
     const nomeDasRedes = Object.keys(dados)
     const quantidadeUsuarios = Object.values(dados)
   
+    const data = [
+      {
+        x: 'nomeDasRedes',
+        y: quantidadedeUsuarios,
+        type: 'bar',
+        marker: {
+          color: getCSS('--primary-color')
+        }
+      }
+    ]
+  
+    const grafico = document.createElem
+
+    const layout = {
+      plot_bgcolor: getCSS('--bg-color'),
+      paper_bgcolor: getCSS('--bg-color')
   }
   
-  const data = [
-    {
-      x: 'nomeDasRedes',
-      y: quantidadedeUsuarios,
-      type: 'bar',
-      marker: {
-        color: getCSS('--primary-color')
-      }
-    }
-  ]
+  Plotly.newPlot(grafico, data, layout)
 
-  const grafico = document.createElem
+  }
+
+  quantidadeUsuarios()
